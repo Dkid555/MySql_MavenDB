@@ -4,19 +4,13 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import java.sql.SQLException;
+
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
+public class AppTest extends TestCase
 {
-    public static boolean CsvTest()
-    {
-//        String path = "C:\Users\dima\TEST\test.csv";
-        return true;
-    }
-
-
     public static Test suite()
     {
         return new TestSuite( AppTest.class );
@@ -25,8 +19,9 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
-    {
-        assertTrue( true );
+    public void testApp() throws SQLException, ClassNotFoundException {
+        MyConnection con = new MyConnection();
+        con.getConnection();
+        con.closeConnection();
     }
 }
