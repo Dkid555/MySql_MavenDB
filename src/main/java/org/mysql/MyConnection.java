@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class MyConnection {
-    private static final String CONNECTION_STR = "jdbc:mysql://localhost:3306/test_db";
+    private static final String CONNECTION_STR = "jdbc:mysql://localhost:3306/plitkazavr_db";
     private static final String USER = "root";
     private static final String PSWD = "root";
 
